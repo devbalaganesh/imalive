@@ -1,17 +1,16 @@
 {
-  "name": "@repo/db",
-  "module": "index.ts",
+  "name": "hub-backend",
   "type": "module",
   "private": true,
-  "exports": {
-    "./client": "./index.ts"
-  },
   "scripts": {
-    "postinstall": "prisma generate --schema ./prisma/schema.prisma"
+    "dev": "bun run index.ts",
+    "build": "bun build index.ts --outdir dist --target bun",
+    "start": "bun run dist/index.js"
   },
   "dependencies": {
-    "@prisma/client": "^6.5.0",
-    "prisma": "^6.5.0"
+    "@repo/db": "*",
+    "@repo/common": "*",
+    "@solana/web3.js": "^1.98.0"
   },
   "devDependencies": {
     "@types/bun": "latest"
