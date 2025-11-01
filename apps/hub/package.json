@@ -2,19 +2,23 @@
   "name": "hub",
   "type": "module",
   "private": true,
-  "module": "index.ts",
   "scripts": {
     "dev": "bun run index.ts",
     "build": "bun build index.ts --outdir dist --target bun",
-    "start": "bun run dist/index.js"
-  },
-  "dependencies": {
-    "@solana/web3.js": "^1.98.0",
-    "@repo/db": "*",
-    "@repo/common": "*"
+    "start": "bun run dist/index.js",
+    "postinstall": "prisma generate --schema ../../packages/db/prisma/schema.prisma"
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "typescript": "^5.8.2"
+    "@repo/db": "*",
+    "@repo/common": "*"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.98.0",
+    "@prisma/client": "latest",
+    "prisma": "latest"
   }
 }
