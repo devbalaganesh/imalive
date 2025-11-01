@@ -5,7 +5,7 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: "wakey.wakeydpin@gmail.com",
+    user: "imlive.alerts@gmail.com",
     pass: process.env.MAIL_PASS,
   },
 });
@@ -17,7 +17,7 @@ export const sendFailureMail = async (
 ) => {
   try {
     const mailOptions = {
-      from: '"Wakey-Wakey Alerts" <alerts@wakey-wakey.com>',
+      from: '"imlive Alerts" <alerts@imlive.com>',
       to,
       subject: `🚨 Website Down Alert: ${url}`,
       text: `Hey there, 
@@ -31,7 +31,7 @@ We detected that your subscribed website is currently down.
 Our system will continue monitoring and notify you once it's back online.
 
 Stay tuned,  
-Wakey-Wakey Team`,
+i'm live Team`,
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.6;">
           <h2>🚨 Website Down Alert!</h2>
@@ -42,7 +42,7 @@ Wakey-Wakey Team`,
           <p><strong>🕒 Time:</strong> ${new Date().toLocaleString()}</p>
           <p>Our system will keep monitoring and notify you once it's back online.</p>
           <p>Stay tuned,</p>
-          <p><strong>Wakey-Wakey Team</strong></p>
+          <p><strong>I'm live Team</strong></p>
         </div>
       `,
     };
@@ -61,7 +61,7 @@ export const sendLatencyAlertMail = async (
 ) => {
   try {
     const mailOptions = {
-      from: '"Wakey-Wakey Alerts" <alerts@wakey-wakey.com>',
+      from: '"imlive Alerts" <alerts@imlive.com>',
       to,
       subject: `🚀 Great News! ${url} is Running with Low Latency`,
       text: `Hey there, 
@@ -75,7 +75,7 @@ export const sendLatencyAlertMail = async (
   This means faster load times and a better experience for your users. Keep up the good work!
   
   Stay ahead,  
-  Wakey-Wakey Team`,
+ I'm live Team`,
 
       html: `
           <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
@@ -87,7 +87,7 @@ export const sendLatencyAlertMail = async (
             <p><strong>🕒 Time:</strong> ${new Date().toLocaleString()}</p>
             <p>This ensures a fast and seamless experience for your users. Keep it up!</p>
             <p>Best,</p>
-            <p><strong>Wakey-Wakey Team</strong></p>
+            <p><strongI'm live Team</strong></p>
           </div>
         `,
     };
