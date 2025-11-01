@@ -6,15 +6,16 @@
     "dev": "bun run --watch index.ts",
     "build": "bun build index.ts --outdir dist --target node",
     "start": "bun run ./dist/index.js",
-    "postinstall": "prisma generate --schema ../../packages/db/prisma/schema.prisma"
+    "postinstall": "prisma generate --schema ../../packages/db/prisma/schema.prisma",
+    "vercel-build": "bun install && bun run build"
   },
   "dependencies": {
+    "@clerk/express": "^1.7.43",
     "@prisma/client": "6.2.1",
-    "prisma": "6.2.1",
-    "express": "^4.21.2",
     "cors": "^2.8.5",
+    "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
-     "@clerk/express": "^1.7.43"
+    "prisma": "6.2.1"
   },
   "devDependencies": {
     "@types/bun": "latest",
