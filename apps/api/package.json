@@ -13,7 +13,8 @@
     "prisma": "6.2.1",
     "express": "^4.21.2",
     "cors": "^2.8.5",
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.2",
+     "@clerk/express": "^1.7.43"
   },
   "devDependencies": {
     "@types/bun": "latest",
