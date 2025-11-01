@@ -5,9 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "bun run --watch index.ts",
-    "build": "bun build index.ts --outdir dist  --target node",
-    "start": "bun run ./dist/index.js",
-    "postinstall": "prisma generate"
+  "build": "bun build index.ts --outdir dist --target node",
+  "start": "bun run ./dist/index.js",
+  "postinstall": "prisma generate --schema ../../packages/db/prisma/schema.prisma"
   },
   "devDependencies": {
     "@repo/db": "*",
