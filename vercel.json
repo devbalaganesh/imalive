@@ -1,14 +1,12 @@
 {
-  "builds": [
-    {
-      "src": "apps/api/index.ts",
-      "use": "@vercel/bun"
+  "functions": {
+    "api/**.js": {
+      "runtime": "nodejs20.x"
+    },
+    "api/**.ts": {
+      "runtime": "nodejs20.x"
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "apps/api/index.ts"
-    }
-  ]
+  },
+  "buildCommand": "cd apps/api && bun install && bun run build",
+  "outputDirectory": "apps/api/dist"
 }
