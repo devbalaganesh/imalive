@@ -62,15 +62,13 @@
     "apps/hub": {
       "name": "hub",
       "dependencies": {
+        "@repo/common": "*",
+        "@repo/db": "*",
         "@solana/web3.js": "^1.98.0",
       },
       "devDependencies": {
-        "@repo/common": "*",
-        "@repo/db": "*",
         "@types/bun": "latest",
-      },
-      "peerDependencies": {
-        "typescript": "^5",
+        "typescript": "^5.8.2",
       },
     },
     "apps/web": {
